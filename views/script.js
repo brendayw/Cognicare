@@ -1,11 +1,11 @@
-const container = document.getElementById("container");
-const overlayBtn = document.getElementById("overlayBtn");
+const container = document.querySelector('.container');
+const singupBtn = document.querySelector('.singup-btn');
+const singinBtn = document.querySelector('.singin-btn');
 
-overlayBtn.addEventListener("click", () => {
-    container.classList.toggle("right__panel__active");
+singupBtn.addEventListener('click', () => {
+    container.classList.add('active');
+})
 
-    overlayBtn.classList.remove("scale__btn-animation");
-    window.requestAnimationFrame(() => {
-        overlayBtn.classList.add("scale__btn-animation");
-    });
-});
+singinBtn.addEventListener('click', () => {
+    container.classList.remove('active');
+})
