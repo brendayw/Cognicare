@@ -1,3 +1,4 @@
+/*inicio*/
 const container = document.querySelector('.container');
 const singupBtn = document.querySelector('.singup-btn');
 const singinBtn = document.querySelector('.singin-btn');

@@ -1,0 +1,154 @@
+/* FONTS GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+/* VARIABLES */
+:root {
+    --primary-color: #9CF8FF;
+    --text-dark: #0f172a;
+    --text-light: #94a3b8;
+    --extra-light: #f8fafc;
+    --white: #FFF;
+}
+
+/* GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    color: var(--white);
+}
+
+/* LAYOUT */
+.menu_dashboard {
+    max-width: 100px;
+    height: 100vh;
+    background: var(--text-light);
+    padding: 20px;
+    transition: max-width .3s ease;
+}
+
+.top_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top_menu .logo {
+    display: flex;
+    align-items: center;
+}
+
+.top_menu  .logo img {
+    width: 40px;
+    transition: width .3s ease;
+}
+
+.top_menu  .logo span {
+    font-size: 20px;
+    margin-left: 20px;
+    display: none;
+
+}
+
+.top_menu  .toggle {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.top_menu  .toggle i {
+    font-size: 35px;
+}
+
+/* INPUT BOX */
+
+.input_search {
+    width: 100%;
+    margin: 50px 0;
+    background-color: #8d9bb8;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.input_search i {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.input_search .input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+    color: var(--white);
+    font-size: 22px;
+    display: none;
+}
+
+.input_search .input::placeholder {
+    color: #ffffff83;
+}
+
+
+/* ENLACES MENU */
+
+.menu .enlace {
+    width: 100%;
+    padding: 20px 0 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.menu .enlace:hover {
+    background: #8d9bb8;
+}
+
+.menu .enlace i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.menu .enlace span {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.menu_dashboard.open {
+    max-width: 300px;
+}
+
+.menu_dashboard.open .top_menu .logo span {
+    display: block;
+}
+
+.menu_dashboard.open .input_search
+.menu_dashboard.open .menu .enlace {
+    width: auto;
+}
+
+.menu_dashboard.open .input_search .input {
+    display: block;
+}
+
+.menu_dashboard.open .menu .enlace {
+    padding: 20px;
+}
+
+.menu_dashboard.open .menu .enlace span {
+    opacity: 1;
+}
