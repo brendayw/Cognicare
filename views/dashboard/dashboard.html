@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashbaord_styles.css">
+    <link rel="stylesheet" href="/views/dashboard/dashbaord_styles.css">
     <!-- Enlace al CDN de Google Material Icons con el estilo Sharp -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 
@@ -12,48 +12,166 @@
     
 </head>
 <body>
-    <div class="menu_dashboard">
-        <!-- top menu -->
-        <div class="top_menu">
-            <div class="logo">
-                <!-- <img src="" alt=""> -->
-                <span>CogniCare</span>
+    <div class="container">
+        <div class="menu_dashboard">
+            <!-- top menu -->
+            <div class="top_menu">
+                <div class="logo">
+                    <!-- <img src="" alt=""> -->
+                    <span>CogniCare</span>
+                </div>
+            
+                <div class="toggle">
+                    <i class="material-icons-sharp">menu</i>
+                </div>
+            </div>
+            <!--  search -->
+            <div class="input_search">
+                <i class="material-icons-sharp">search</i>
+                <input type="text" class="input" placeholder="Buscar">
+            </div>
+            <!-- menu -->
+            <div class="menu">
+                <div class="enlace">
+                    <i class="material-icons-sharp">home</i>
+                    <span>Inicio</span>
+                </div>
+    
+                <div class="enlace">
+                    <i class="material-icons-sharp">groups</i>
+                    <span>Pacientes</span>
+                </div>
+    
+                <div class="enlace">
+                    <i class="material-icons-sharp">person</i>
+                    <span>Profesional</span>
+                </div>
+    
+                <div class="enlace">
+                    <i class="material-icons-sharp">settings</i>
+                    <span>Ajustes</span>
+                </div>
+    
+                <div class="enlace">
+                    <i class="material-icons-sharp">logout</i>
+                    <span>Salir</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="panel">
+            <div class="tarjetas">
+                <h3>Todos los pacientes</h3>
+                <div class="diagnostico">
+                    <i class="material-icons-sharp">psychology_alt</i>
+                    <h4>Diagnostico</h4>
+                    <i class="material-icons-sharp">more_vert</i>
+                    
+                </div>
+                <div class="tratamiento">
+                    <i class="material-icons-sharp">psychology</i>
+                    <h4>Tratamiento</h4>
+                    <i class="material-icons-sharp">more_vert</i>
+                </div>
+            </div>
+
+            <div class="graphic">
+                <h4>graf</h4>
             </div>
         
-            <div class="toggle">
-                <i class="material-icons-sharp">menu</i>
+            <div class="perfil_profesional">
+                <h3>Perfil del profesional</h3>
+                <div class="tarjeta_profesional">
+                    <div class="perfil">
+                        <img src="/views/assets/avatar.jpg" alt="">
+                    </div>
+                    <div class="datos">
+                        <h4>Nombre Completo</h4>
+                        <p>Profesión:</p>
+                        <p>Matricula:</p>
+                    </div>
+                    
+                    <button type="submit" class="btn">Ver Perfil</button>
+                    
+                </div>
+            </div>
+
+            <div class="calendario_contenedor">
+                <div class="calendario">
+                    <div class="calendario_header">
+                        <button class="calendario_btn" id="prev_month">Prev</button>
+                        <span id="month_year" class="month_year"></span>
+                        <button class="calendario_btn" id="next_month">Next</button>
+                    </div>
+                    <div class="calendar_body">
+                        <div class="days_of_week">
+                            <div>Dom</div>
+                            <div>Lun</div>
+                            <div>Mar</div>
+                            <div>Mier</div>
+                            <div>Jue</div>
+                            <div>Vier</div>
+                            <div>Sab</div>
+                        </div>
+                        <div class="days" id="calendar_days"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--  search -->
-        <div class="input_search">
-            <i class="material-icons-sharp">search</i>
-            <input type="text" class="input" placeholder="Buscar">
-        </div>
-        <!-- menu -->
-        <div class="menu">
-            <div class="enlace">
-                <i class="material-icons-sharp">home</i>
-                <span>Inicio</span>
+
+        <div class="panel_derecho">
+            <div class="input_search_panel">
+                <i class="material-icons-sharp">search</i>
+                <input type="text" class="input_panel" placeholder="Buscar">
             </div>
 
-            <div class="enlace">
-                <i class="material-icons-sharp">groups</i>
-                <span>Pacientes</span>
+            <div class="agregar">
+                <div class="add_tarjetas">
+                    <div class="add_paciente">
+                        <i class="material-icons-sharp">person_add</i>
+                        <span>Agregar paciente</span>
+                    </div>
+                    <div class="add_seguimiento">
+                        <i class="material-icons-sharp">note_add</i>
+                        <span>Agregar seguimiento</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="enlace">
-                <i class="material-icons-sharp">person</i>
-                <span>Profesional</span>
-            </div>
-
-            <div class="enlace">
-                <i class="material-icons-sharp">settings</i>
-                <span>Ajustes</span>
-            </div>
-
-            <div class="enlace">
-                <i class="material-icons-sharp">logout</i>
-                <span>Salir</span>
+            <div class="ultimos_pacientes">
+                <h4>Ultimos pacientes</h4>
+                <div class="pacientes">
+                    <div class="paciente">
+                        <div class="perfil_paciente">
+                            <img src="/views/assets/hombre_avatar.avif" alt="">
+                        </div>
+                        <div class="info_paciente">
+                            <h5>Nombre Completo</h5>
+                            <p>Edad:</p>
+                            <p>Motivo:</p>
+                        </div>
+                    </div>
+                    <div class="paciente">
+                        <div class="perfil_paciente">
+                            <img src="/views/assets/avatar_mujer.jpg" alt="">
+                        </div>
+                        <div class="info_paciente">
+                            <h5>Nombre Completo</h5>
+                            <p>Edad:</p>
+                            <p>Motivo:</p>
+                        </div>
+                    </div>
+                    <div class="paciente">
+                        <div class="perfil_paciente">
+                            <img src="/views/assets/hombre_avatar.avif" alt="">
+                        </div>
+                        <div class="info_paciente">
+                            <h5>Nombre Completo</h5>
+                            <p>Edad:</p>
+                            <p>Motivo:</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
