@@ -206,7 +206,7 @@ body {
 .tarjetas .diagnostico {
     background: var(--extra-light);
     box-shadow: 2px 2px 5px var(--text-light);
-    width: 250px;
+    width: 300px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -217,7 +217,7 @@ body {
 .tarjetas .tratamiento {
     background: var(--extra-light);
     box-shadow: 2px 2px 5px var(--text-light);
-    width: 250px;
+    width: 300px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -300,6 +300,29 @@ button {
 }
 
 /*grafico*/
+.graphBox {
+    background: var(--extra-light);
+    box-shadow: 2px 2px 5px var(--text-light);
+    position: relative;
+    border-radius: 15px;
+    width: 120%;
+    right: 100px;
+    padding: 5px;
+    max-height: 300px;
+    display: flex;  /* Utilizamos flexbox */
+    justify-content: center; /* Centra los elementos de manera horizontal */
+    align-items: center;
+}
+.titulo_grafico {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 15px;
+}
+#myChart {
+    margin-left: auto;
+}
+
 
 /*calendario*/
 .calendario_contenedor {
