@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+:root {
+    --primary-color: #9CF8FF;
+    --text-dark: #0f172a;
+    --text-light: #94a3b8;
+    --extra-light: #f8fafc;
+    --white: #FFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    color: var(--white);
+}
+
+.panel_profesional {
+    margin-left: 125px;
+    width: 70%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr auto;
+    gap: 20px;
+    padding: 20px;
+}
+.panel_profesional h3 {
+    color: var(--text-light);
+}
+
+/* perfil profesional*/
+.perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.perfil .tarjeta {
+    background: var(--extra-light);
+    box-shadow: 2px 2px 5px var(--text-light);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 16px;
+    position: relative;
+    color: var(--text-light);
+}
+
+.perfil_foto {
+    margin-left: -10px;
+}
+
+.tarjeta .perfil_foto img {
+    width: 125px;
+    height: 125px;
+    border: 1px solid var(--text-dark);
+    border-radius: 30rem;
+}
+
+.tarjeta .datos_profesional {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.datos_profesional h4 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    flex-basis: 100%;
+    padding-bottom: 0.5rem;
+}
+
+.datos_profesional p {
+    color: var(--text-dark);
+    text-align: left;
+    padding: 1rem 0;
+    flex-basis: 50%;
+    font-size: 14px;
+}
+
+/*
+button {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    background: var(--text-light);
+    width: 125px;
+    height: 20px;
+    padding: 1.2rem;
+    margin: 1rem;
+    color: var(--extra-light);
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* acceso rapido*/
+.acceso_rapido {
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -10px;
+}
+
+.pacientes_totales, .pacientes_tto,
+.pacientes_dx, .pacientes_mas {
+    background-color: var(--text-light);
+    box-shadow: 2px 2px 5px var(--text-light);
+    width: 100px;
+    height: 100px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+.pacientes_totales i, .pacientes_tto i,
+.pacientes_dx i, .pacientes_mas i {
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+}
+.pacientes_totales span, .pacientes_tto span,
+.pacientes_dx span, .pacientes_mas span {
+    font-size: 12px;
+}
+
+/*avance de pacientes*/
+.avance_pacientes {
+    background: var(--extra-light);
+    box-shadow: 2px 2px 5px var(--text-light);
+    /* background-color: red; */
+    margin-top: -20px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+#avancePacienteChart {
+    width: 900px; /* Ajusta el tamaño al 100% del contenedor */
+    height: 225px; /* Asegúrate de dar un tamaño adecuado */
+}
+
+/*panel derecho*/
+.foto_perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto_perfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20rem;
+    border: 1px solid var(--text-light);
+    /*falta ajustar posicion*/
+}

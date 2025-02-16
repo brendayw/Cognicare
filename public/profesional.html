@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/dashbaord.css">
+    <link rel="stylesheet" href="/public/css/profesional.css">
     <!-- Enlace al CDN de Google Material Icons con el estilo Sharp -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 
@@ -34,7 +35,7 @@
             <div class="menu">
                 <div class="enlace">
                     <i class="material-icons-sharp">home</i>
-                    <a href="#"><span>Inicio</span></a>
+                    <a href="/public/dashboard.html"><span>Inicio</span></a>
                 </div>
     
                 <div class="enlace">
@@ -59,24 +60,47 @@
             </div>
         </div>
     
-        <div class="panel">        
-            <div class="perfil_profesional">
+        <div class="panel_profesional">        
+            <div class="perfil">
                 <h3>Perfil del profesional</h3>
-                <div class="tarjeta_profesional">
-                    <div class="perfil">
+                <div class="tarjeta">
+                    <div class="perfil_foto">
                         <img src="/public/assets/avatar.jpg" alt="">
                     </div>
-                    <div class="datos">
+                    <div class="datos_profesional">
                         <h4>Nombre Completo</h4>
-                        <p>Profesión:</p>
+                        <p>Profesión:</p> 
                         <p>Matricula:</p>
+                        <p>Email:</p>
+                        <p>Telefono:</p>
                     </div>
-                    
-                    <button type="submit" class="btn">
-                        <a href="/public/profesional.html">Ver Perfil</a> 
-                    </button>
-                    
+                    <div class="editar_perfil">
+                        <a href="#"><i class="material-icons-sharp">edit</i></a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="acceso_rapido">
+                <div class="pacientes_totales">
+                    <i class="material-icons-sharp">diversity_3</i>
+                    <span>Pacientes</span>
+                </div>
+                <div class="pacientes_tto">
+                    <i class="material-icons-sharp">psychology_alt</i>
+                    <span>Pacientes</span>
+                </div>
+                <div class="pacientes_dx">
+                    <i class="material-icons-sharp">psychology</i>
+                    <span>Pacientes</span>
+                </div>
+                <div class="pacientes_mas">
+                    <i class="material-icons-sharp">add</i>
+                    <span>Pacientes</span>
+                </div>
+            </div>
+
+            <div class="avance_pacientes">
+                <canvas id="avancePacienteChart" width="700" height="225"></canvas>
             </div>
         </div>
 
@@ -86,25 +110,12 @@
                 <input type="text" class="input_panel" placeholder="Buscar">
             </div>
 
-            <div class="agregar">
-                <div class="add_tarjetas">
-                    <a href="#">
-                        <div class="add_paciente">
-                            <i class="material-icons-sharp">person_add</i>
-                            <span>Agregar paciente</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="add_seguimiento">
-                            <i class="material-icons-sharp">note_add</i>
-                            <span>Agregar seguimiento</span>
-                        </div>
-                    </a>
-                </div>
+            <div class="foto_perfil">
+                <img src="/public/assets/avatar.jpg" alt="">
             </div>
 
             <div class="ultimos_pacientes">
-                <h4>Ultimos pacientes</h4>
+                <h4>Ultimos actualizados</h4>
                 <div class="pacientes">
                     <div class="paciente">
                         <div class="perfil_paciente">
@@ -142,8 +153,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    
-    <script src="/public/js/dashboard.js"></script>
-    
+    <script src="/public/js/profesional.js"></script> 
 </body>
 </html>

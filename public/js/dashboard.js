@@ -38,7 +38,7 @@ new Chart(ctx, {
           hoverOffset: 4
         }],
     },
-  });
+});
 
 
 /*calendario*/
