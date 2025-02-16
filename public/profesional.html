@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/views/dashboard/dashbaord_styles.css">
+    <link rel="stylesheet" href="/public/css/dashbaord.css">
     <!-- Enlace al CDN de Google Material Icons con el estilo Sharp -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 
-    <title>Dashboard | Cognicare</title>
+    <title>Perfil Profesional | Cognicare</title>
     
     
 </head>
@@ -34,22 +34,22 @@
             <div class="menu">
                 <div class="enlace">
                     <i class="material-icons-sharp">home</i>
-                    <span>Inicio</span>
+                    <a href="#"><span>Inicio</span></a>
                 </div>
     
                 <div class="enlace">
                     <i class="material-icons-sharp">groups</i>
-                    <span>Pacientes</span>
+                    <a href="#"><span>Pacientes</span></a>
                 </div>
     
                 <div class="enlace">
                     <i class="material-icons-sharp">person</i>
-                    <span>Profesional</span>
+                    <a href="/public/profesional.html"><span>Profesional</span></a>
                 </div>
     
                 <div class="enlace">
                     <i class="material-icons-sharp">settings</i>
-                    <span>Ajustes</span>
+                    <a href="#"><span>Ajustes</span></a>
                 </div>
     
                 <div class="enlace">
@@ -59,34 +59,12 @@
             </div>
         </div>
     
-        <div class="panel">
-            <div class="tarjetas">
-                <h3>Todos los pacientes</h3>
-                <div class="diagnostico">
-                    <i class="material-icons-sharp">psychology_alt</i>
-                    <h4>Diagnostico</h4>
-                    <i class="material-icons-sharp">more_vert</i>
-                    
-                </div>
-                <div class="tratamiento">
-                    <i class="material-icons-sharp">psychology</i>
-                    <h4>Tratamiento</h4>
-                    <i class="material-icons-sharp">more_vert</i>
-                </div>
-            </div>
-
-            <div class="graphBox">
-                <div>
-                    <h4 class="titulo_grafico">Grafico de pacientes</h4>
-                </div>
-                <canvas class="canva_chart" id="myChart"></canvas>
-            </div>
-        
+        <div class="panel">        
             <div class="perfil_profesional">
                 <h3>Perfil del profesional</h3>
                 <div class="tarjeta_profesional">
                     <div class="perfil">
-                        <img src="/views/assets/avatar.jpg" alt="">
+                        <img src="/public/assets/avatar.jpg" alt="">
                     </div>
                     <div class="datos">
                         <h4>Nombre Completo</h4>
@@ -94,30 +72,10 @@
                         <p>Matricula:</p>
                     </div>
                     
-                    <button type="submit" class="btn">Ver Perfil</button>
+                    <button type="submit" class="btn">
+                        <a href="/public/profesional.html">Ver Perfil</a> 
+                    </button>
                     
-                </div>
-            </div>
-
-            <div class="calendario_contenedor">
-                <div class="calendario">
-                    <div class="calendario_header">
-                        <button class="calendario_btn" id="prev_month">Prev</button>
-                        <span id="month_year" class="month_year"></span>
-                        <button class="calendario_btn" id="next_month">Next</button>
-                    </div>
-                    <div class="calendar_body">
-                        <div class="days_of_week">
-                            <div>Dom</div>
-                            <div>Lun</div>
-                            <div>Mar</div>
-                            <div>Mier</div>
-                            <div>Jue</div>
-                            <div>Vier</div>
-                            <div>Sab</div>
-                        </div>
-                        <div class="days" id="calendar_days"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -130,14 +88,18 @@
 
             <div class="agregar">
                 <div class="add_tarjetas">
-                    <div class="add_paciente">
-                        <i class="material-icons-sharp">person_add</i>
-                        <span>Agregar paciente</span>
-                    </div>
-                    <div class="add_seguimiento">
-                        <i class="material-icons-sharp">note_add</i>
-                        <span>Agregar seguimiento</span>
-                    </div>
+                    <a href="#">
+                        <div class="add_paciente">
+                            <i class="material-icons-sharp">person_add</i>
+                            <span>Agregar paciente</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="add_seguimiento">
+                            <i class="material-icons-sharp">note_add</i>
+                            <span>Agregar seguimiento</span>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -146,7 +108,7 @@
                 <div class="pacientes">
                     <div class="paciente">
                         <div class="perfil_paciente">
-                            <img src="/views/assets/hombre_avatar.avif" alt="">
+                            <img src="/public/assets/hombre_avatar.avif" alt="">
                         </div>
                         <div class="info_paciente">
                             <h5>Nombre Completo</h5>
@@ -156,7 +118,7 @@
                     </div>
                     <div class="paciente">
                         <div class="perfil_paciente">
-                            <img src="/views/assets/avatar_mujer.jpg" alt="">
+                            <img src="/public/assets/avatar_mujer.jpg" alt="">
                         </div>
                         <div class="info_paciente">
                             <h5>Nombre Completo</h5>
@@ -166,7 +128,7 @@
                     </div>
                     <div class="paciente">
                         <div class="perfil_paciente">
-                            <img src="/views/assets/hombre_avatar.avif" alt="">
+                            <img src="/public/assets/hombre_avatar.avif" alt="">
                         </div>
                         <div class="info_paciente">
                             <h5>Nombre Completo</h5>
@@ -179,10 +141,9 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     
-    <script src="dashboard.js"></script>
+    <script src="/public/js/dashboard.js"></script>
     
 </body>
 </html>
