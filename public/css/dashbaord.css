@@ -79,7 +79,7 @@ body {
 
 .input_search {
     width: 100%;
-    margin: 50px 0;
+    margin: 25px 0;
     background-color: #8d9bb8;
     padding: 15px;
     border-radius: 8px;
@@ -111,55 +111,75 @@ body {
 /* ENLACES MENU */
 .menu .enlace {
     width: 100%;
-    padding: 20px 0 20px 17px;
+    height: 80px;
+    padding: 15px;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
     cursor: pointer;
     font-size: 20px;
     transition: all .3s ease;
 }
 
-.menu .enlace:hover {
-    background: #8d9bb8;
-}
-
 .menu .enlace i {
-    margin-right: 20px;
     font-size: 25px;
+    margin-top: 20px;
 }
 
 .menu .enlace span {
     opacity: 0;
     transition: opacity .3s ease;
+    margin-left: 10px;
+    
+}
+
+.menu_dashboard.open .menu .enlace {
+    padding: 20px;
+    width: auto;
+}
+
+.menu_dashboard.open .menu .enlace i {
+    margin-bottom: 20px;
+    padding: 1rem;
+}
+
+.menu_dashboard.open .menu .enlace span {
+    opacity: 1;
+    position: relative;
+    top: -5px;
 }
 
 .menu_dashboard.open {
-    max-width: 300px;
+    max-width: 275px;
 }
-
 
 .menu_dashboard.open .top_menu .logo span {
     display: block;
-}
-
-.menu_dashboard.open .input_search
-.menu_dashboard.open .menu .enlace {
-    width: auto;
 }
 
 .menu_dashboard.open .input_search .input {
     display: block;
 }
 
-.menu_dashboard.open .menu .enlace {
-    padding: 20px;
+.menu .enlace:hover {
+    background: #8d9bb8;
 }
 
-.menu_dashboard.open .menu .enlace span {
-    opacity: 1;
+.link_menu {
+    text-decoration: none;
+    color: inherit;
 }
+
+
+
+
+/* .menu_dashboard.open .input_search
+.menu_dashboard.open .menu .enlace {
+    width: auto;
+} */
+
 
 /*panel*/
 .panel {
@@ -179,7 +199,7 @@ body {
 }
 
 .panel h4 {
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 /* 
 .menu_dashboard.open + .panel {
@@ -195,15 +215,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
 .tarjetas .diagnostico,
 .tarjetas .tratamiento {
     margin-bottom: 20px;
-}
-
-.tarjetas .diagnostico {
     background: var(--extra-light);
     box-shadow: 2px 2px 5px var(--text-light);
     width: 300px;
@@ -212,27 +228,30 @@ body {
     align-items: center;
     justify-content: space-around;
     border-radius: 16px;
+    color: var(--text-light);
 }
 
-.tarjetas .tratamiento {
-    background: var(--extra-light);
-    box-shadow: 2px 2px 5px var(--text-light);
-    width: 300px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 16px;
+.diagnostico h4, 
+.tratamiento h4 {
+    color: var(--text-light);
 }
 
-.diagnostico i {
-    font-size: 40px;
-    color: var(--text-dark);
-}
-
+.diagnostico i,
 .tratamiento i {
     font-size: 40px;
-    color: var(--text-dark);
+    color: var(--text-light);
+}
+
+.diagnostico a:hover,
+.tratamiento a:hover {
+    background-color: var(--text-light);
+    color: var(--text-light);
+    border-radius: 5rem;
+}
+
+.en_tto i:hover,
+.en_dx i:hover {
+    color: var(--extra-light);
 }
 
 .perfil_profesional {
@@ -256,7 +275,7 @@ body {
 .tarjeta_profesional .perfil img {
     width: 150px;
     height: 150px;
-    border: 1px solid var(--text-dark);
+    border: 1px solid var(--text-light);
     border-radius: 30rem;
 }
 
@@ -270,7 +289,7 @@ body {
     text-align: center;
 }
 .datos p {
-    color: var(--text-dark);
+    color: var(--text-light);
     text-align: left;
     padding: 1rem 0;
 }
@@ -297,6 +316,22 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+.ver_perfil {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn:hover {
+    border: 1px solid var(--text-light);
+    background-color: transparent;
+    color: var(--text-light);
 }
 
 /*grafico*/
@@ -327,7 +362,7 @@ button {
 /*calendario*/
 .calendario_contenedor {
     overflow: hidden;
-    height: 300px;
+    height: 250px;
 }
 
 .calendario {
@@ -360,7 +395,9 @@ button {
 }
 
 .calendario_btn:hover {
-    background: var(--text-dark);
+    background: var(--white);
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
 }
 
 .month_year {
@@ -455,6 +492,10 @@ button {
     gap: 10px;
 }
 
+.add_tarjetas a {
+    text-decoration: none;
+}
+
 .add_paciente,
 .add_seguimiento {
     margin-top: 15px;
@@ -470,7 +511,13 @@ button {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 16px;
-    color: var(--text-dark);
+    color: var(--text-light);
+}
+
+.add_paciente:hover,
+.add_seguimiento:hover {
+    background-color: var(--text-light);
+    color: var(--white);
 }
 
 /*seccion pacientes*/
@@ -504,7 +551,7 @@ button {
 .pacientes .paciente img {
     width: 60px;
     height: 60px;
-    border: 1px solid var(--text-dark);
+    border: 1px solid var(--text-light);
     border-radius: 30rem;
 }
 
@@ -520,7 +567,7 @@ button {
 }
 
 .info_paciente p {
-    color: var(--text-dark);
+    color: var(--text-light);
     text-align: left;
     padding: 0.1rem 0;
     font-size: 0.7rem;
