@@ -19,6 +19,7 @@ body {
     color: var(--white);
 }
 
+/* paneles */
 .panel_profesional, 
 .panel_editar {
     position: absolute;
@@ -53,7 +54,7 @@ body {
     pointer-events: all;
 }
 
-/*alrerna visivilidad*/
+/*alterna visivilidad de paneles*/
 .hidden {
     opacity: 0;
     visibility: hidden;
@@ -171,7 +172,6 @@ body {
 .avance_pacientes {
     background: var(--extra-light);
     box-shadow: 2px 2px 5px var(--text-light);
-    /* background-color: red; */
     margin-top: -20px;
     height: 250px;
     border-radius: 8px;
@@ -186,7 +186,6 @@ body {
 /* PANEL DE EDITAR PERFIL */
 .perfil_content {
     background: var(--extra-light);
-    /* background-color: transparent; */
     box-shadow: 2px 2px 5px var(--text-light);
     padding: 20px;
     border-radius: 1rem;
@@ -204,11 +203,10 @@ body {
 
 .titulo_panel {
     font-size: .9rem;
-    /* width: 50%; */
 }
-    /*boton para volver atras*/
+
+/*boton para volver atras*/
 .volver {
-    /* width: 50%; */
     display: flex;
     justify-content: flex-end;
 }
@@ -310,7 +308,6 @@ button:hover {
     height: 180px;
     border-radius: 20rem;
     border: 1px solid var(--text-light);
-    /*falta ajustar posicion*/
 }
 
 .pacientes {
