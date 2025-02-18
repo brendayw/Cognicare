@@ -247,7 +247,12 @@ form textarea {
     border: 1px solid var(--text-light);
     border-radius: 8px;
     font-size: 15px;
+    color: var(--text-light);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input::placeholder {
+    color: var(--text-light);
 }
 
 /*boton que guarda cambios*/
@@ -306,6 +311,25 @@ button:hover {
     border-radius: 20rem;
     border: 1px solid var(--text-light);
     /*falta ajustar posicion*/
+}
+
+.pacientes {
+    height: 300px;
+}
+
+.info_paciente {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+}
+
+.info_paciente h5 {
+    text-align: left;
+}
+
+.info_paciente p {
+    color: var(--text-light);
 }
 
 
